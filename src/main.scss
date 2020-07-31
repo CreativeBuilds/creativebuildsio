@@ -1,0 +1,90 @@
+:root {
+  --lighter: #f4f4fc;
+  --light: #b7b7da;
+  --dark-brighter: #47475e;
+  --dark: #23232c;
+  --darker: #19191f;
+
+  --min-desktop: 1250px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--darker);
+  margin: 0;
+  position: relative;
+}
+
+#root {
+  overflow: auto;
+  max-height: 100vh;
+  overflow-x: hidden;
+  // overflow-y: hidden;
+}
+
+#root.loaded {
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  animation: fadeIn 2s ease-in;
+  transition: all 0.25s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lighter);
+  opacity: 1;
+  transition: background 0.25s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track:hover {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
