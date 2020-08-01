@@ -17,7 +17,7 @@ const spin = keyframes`
   }
 `;
 
-const flicker = keyframes`
+export const flicker = keyframes`
   0%,
   6%,
   15%,
